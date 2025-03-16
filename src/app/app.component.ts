@@ -43,8 +43,8 @@ export class AppComponent implements OnInit {
         error: (error) => {
           this.pokemonData = null;
           this.errorMessage = error.status === 404
-            ? 'Pokémon não encontrado! Verifique o nome e tente novamente.'
-            : 'Ocorreu um erro ao buscar o Pokémon. Tente novamente mais tarde.';
+            ? 'Pokémon não encontrado!.'
+            : 'Ocorreu um erro ao buscar o Pokémon.';
         }
       });
     }

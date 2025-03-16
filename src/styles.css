@@ -1,16 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .custom-background {
-    background-image: url('https://blog.pensanddolls.com.br/wp-content/uploads/2024/10/capturando-pokemons-raros-os-melhores-colecionaveis-do-universo-pokemon.jpeg');
-    
+    background-image: url('https://s2-ge.glbimg.com/DVN_xehNY82qoUxHYAxSzh2KmsU=/0x0:1500x938/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2021/v/P/rXsyelT9K3T1gJqG2AmA/capas-pokemon-red-e-blue.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
   }
-  
+
   .custom-background .container-fluid {
     position: absolute;
     top: 0;
@@ -18,6 +16,5 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     right: 0;
     bottom: 0;
     z-index: 1;
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com opacidade */
+    background-color: rgba(255, 255, 255, 0.8);
   }
-  
