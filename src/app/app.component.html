@@ -1,0 +1,50 @@
+<div class="container-fluid vh-100 d-flex flex-column justify-content-center align-items-center bg-light custom-background">
+  <h1 class="mb-4">Pokédex</h1>
+  
+  <div class="search-container mb-4 w-100" style="max-width: 400px;">
+    <input 
+      [(ngModel)]="pokemonName" 
+      (keydown.enter)="searchPokemon()" 
+      placeholder="Digite o nome do Pokémon" 
+      class="form-control w-100" 
+      aria-label="Digite o nome do Pokémon"
+    />
+    <button 
+      (click)="searchPokemon()" 
+      class="btn btn-primary w-100 mt-2"
+      [disabled]="!pokemonName.trim()"
+    >
+      Pesquisar
+    </button>
+  </div>
+
+  <div *ngIf="pokemonData" class="card text-center" style="width: 100%; max-width: 600px;">
+    <img 
+      [src]="pokemonData.sprites.front_default" 
+      alt="{{ pokemonData.name }} imagem" 
+      class="card-img-top mx-auto d-block" 
+      style="width: 150px; height: 150px;" 
+    />
+    <div class="card-body">
+      <h2 class="card-title">{{ pokemonData.name | uppercase }}</h2>
+      <div class="card-text">
+        <p><strong>Tipos:</strong>
+          <span *ngFor="let type of pokemonData.types" class="badge bg-success me-1">
+            {{ type.type.name }}
+          </span>
+        </p>
+        <p><strong>Altura:</strong> {{ pokemonData.height / 10 }} m</p>
+        <p><strong>Peso:</strong> {{ pokemonData.weight / 10 }} kg</p>
+        <p><strong>Habilidades:</strong>
+          <span *ngFor="let ability of pokemonData.abilities" class="badge bg-warning me-1">
+            {{ ability.ability.name }}
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="errorMessage" class="alert alert-danger mt-4">
+    {{ errorMessage }}
+  </div>
+</div>
