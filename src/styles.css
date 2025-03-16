@@ -1,9 +1,9 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
-html, body { height: 100%; }
+html, body { block-size: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .custom-background {
-    background-image: url('https://s2-ge.glbimg.com/DVN_xehNY82qoUxHYAxSzh2KmsU=/0x0:1500x938/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2021/v/P/rXsyelT9K3T1gJqG2AmA/capas-pokemon-red-e-blue.png');
+    background-image: url('https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/02/best-pokemon-anime-seasons-ranked.jpg?q=70&fit=crop&w=1140&h=&dpr=1');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -11,10 +11,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
   .custom-background .container-fluid {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    inset-block-end: 0;
     z-index: 1;
     background-color: rgba(255, 255, 255, 0.8);
   }
